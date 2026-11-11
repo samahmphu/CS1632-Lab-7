@@ -43,19 +43,6 @@ public class Main {
 
         g.addEdge("A", "B", 2);
         g.addEdge("A", "C", 3);
-        g.addEdge("A","D", 5.5);
-        g.addEdge("B", "E", 7);
-        g.addEdge("C", "E", 3);
-        g.addEdge("D", "F", 5);
-        g.addEdge("E","G",5);
-        g.addEdge("E", "H", 5.7);
-        g.addEdge("F","H",4.4);
-        g.addEdge("F","I",5);
-        g.addEdge("G","J",4.3);
-        g.addEdge("H","I",2.8);
-        g.addEdge("H","J",4);
-
-        g.printGraph();
 
         Graph h = new AdjacencyMatrix();
 

@@ -24,7 +24,7 @@ public abstract class Graph {
         while (!queue.isEmpty()) {
             Vertex current = queue.poll();
             System.out.println("\tCurrent Vertex: " + current.getName());
-            System.out.println("\tVertex ID" + current.toString());
+            System.out.println("\tVertex ID " + current.toString());
             for (Edge edge : current.getEdges()) {
                 Vertex neighbor = edge.getFrom() == current
                         ? edge.getTo() : edge.getFrom();
