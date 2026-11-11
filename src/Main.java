@@ -2,7 +2,40 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        while (true) {
+            try {
+                System.out.println("\n-- Menu --" +
+                        "\n1. Read a file as a graph and run a BFS" +
+                        "\n2. Exit application");
+                String in = sc.next();
+                if (Integer.parseInt(in) == 1){
+                    while (true) {
+                        try {
+                            System.out.println("\n-- Read Graph --" +
+                                    "\nEnter the filename of your CSV file located in src/TxtFiles, or enter 0 to cancel." +
+                                    "\nExample: AGraph.csv\n");
+                            System.out.print("Enter file name: ");
+                            in = sc.next();
+                            if (in.equals("0")) {
+                                break;
+                            }
+                            else {Reader.Read("src/TxtFiles/" + in);}
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input");
+                        }
+                    }
+                }
+                else if (Integer.parseInt(in)== 2) {
+                    break;
+                }
+                else {System.out.println("Invalid input");}
+
+            } catch (Exception e) {
+                System.out.println("Invalid input");;
+            }
+        }
     }
 
     public static void test() {

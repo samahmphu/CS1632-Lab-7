@@ -27,11 +27,18 @@ public class Reader {
             System.out.println("Invalid file name.");
             return false;
         }
-        System.out.println("Successfully read the file." +
-                "\n-- Adjacency List -- ");
-        adjList.printGraph();
-        System.out.println("\n-- Adjacency List -- ");
+        System.out.println("Successfully read the file."
+        //  +      "\n-- Adjacency List -- "
+        );
+
+        // printGraph() is not a super good representation for adj list, so it is commented out
+        // adjList.printGraph();
+        System.out.println("\n-- Adjacency List BFS -- ");
+        adjList.BFS(adjList.vertices.getFirst());
+        System.out.println("\n-- Adjacency Matrix Graph -- ");
         adjMatrix.printGraph();
+        System.out.println("\n-- Adjacency Matrix BFS -- ");
+        adjMatrix.BFS(adjMatrix.vertices.getFirst());
         return true;
     }
 }
